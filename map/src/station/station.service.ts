@@ -19,4 +19,12 @@ export class StationService {
     async findOne(id: string): Promise<Station> {
         return this.stationModel.findOne({ _id: id }).exec();
     }
+
+    async update(id: string, station: Station): Promise<Station> {
+        return this.stationModel.findByIdAndUpdate(id, station, { new: true });
+    }
+
+    async remove(id: string): Promise<Station> {
+        return this.stationModel.findByIdAndDelete(id);
+    }
 }
