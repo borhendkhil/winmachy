@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { RouterModule } from './router/router.module'; // Import RouterModule
 import { StationService } from './station/station.service';
 import { StationModule } from './station/station.module';
+import { TransportModule } from './transport/transport.module';
 
 @Module({
   imports: [    
@@ -13,7 +14,8 @@ import { StationModule } from './station/station.module';
     }),
     RouterModule 
     ,
-    StationModule
+    StationModule,
+    TransportModule
   ],
   controllers: [AppController],
   providers: [AppService],

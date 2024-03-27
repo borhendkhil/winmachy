@@ -8,7 +8,10 @@ import { StationSchema, Station } from './schema/station.schema';
   imports: [
     MongooseModule.forFeature([{ name: Station.name , schema: StationSchema }]),
   ],
+  exports: [MongooseModule.forFeature([{ name: Station.name, schema: StationSchema }])],
+
   controllers: [StationController],
   providers:[StationService]
+ 
 })
 export class StationModule {}
